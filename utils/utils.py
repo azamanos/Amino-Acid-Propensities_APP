@@ -207,7 +207,7 @@ class PDB(object):
                 #If line starts with 'ATOM'
                 if line[:4]=='ATOM':
                     #First check if you have multiple models and you dont want them
-                    if int(sline[-1])-1 and not multi_models:
+                    if int(sline[20])-1 and not multi_models:
                         break
                     self.atomnum.append(int(float(sline[1])))
                     self.atomname.append(sline[3])
@@ -217,7 +217,7 @@ class PDB(object):
                     if len(atomtype) == 2:
                         atomtype = atomtype[0].upper() + atomtype[1].lower()
                     self.atomtype.append(atomtype)
-                    self.resnum.append(int(float(sline[-5])))
+                    self.resnum.append(int(float(sline[16])))
                     self.chain.append(sline[6])
                     self.coords.append([float(sline[10]), float(sline[11]), float(sline[12])])
                     self.occupancy.append(float(sline[13]))
