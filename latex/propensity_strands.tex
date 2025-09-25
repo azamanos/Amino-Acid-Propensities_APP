@@ -16,7 +16,7 @@
 		\begin{axis}[
 			ybar=-0.5cm,           % ensures bars for multiple plots are side by side,
 			bar width=0.5cm,
-			title={Amino Acid Propensity in Helices},
+			title={Amino Acid Propensity in Beta Strands},
 			xlabel={Residue},
 			ylabel={Propensity Value},
 			ymin=0,
@@ -29,9 +29,9 @@
 			]
 			
 			\addplot[fill=BlueViolet!70, opacity=0.8]
-			table[col sep=space, x index=0, y index=1]{./data/membrane_helix_propensity.dat};
+			table[col sep=space, x index=0, y index=1]{./data/membrane_beta_strand_propensity.dat};
 			\addplot[fill=RedOrange!70, opacity=0.8]
-			table[col sep=space, x index=0, y index=1]{./data/protein_helix_propensity.dat};
+			table[col sep=space, x index=0, y index=1]{./data/protein_beta_strand_propensity.dat};
 			\addlegendentry{Membrane Proteins};
 			\addlegendentry{Globular Proteins};
 			

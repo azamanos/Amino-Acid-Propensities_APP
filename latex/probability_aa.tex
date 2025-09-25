@@ -16,10 +16,11 @@
 		\begin{axis}[
 			ybar=-0.5cm,           % ensures bars for multiple plots are side by side,
 			bar width=0.5cm,
-			title={Amino Acid Propensity in Helices},
+			title={Amino Acid Probability in Proteins},
 			xlabel={Residue},
-			ylabel={Propensity Value},
+			ylabel={Probability},
 			ymin=0,
+			yticklabel=\pgfkeys{/pgf/number format/.cd,fixed,precision=2,zerofill}\pgfmathprintnumber{\tick},
 			xmin=ALA,
 			xtick=data,
 			%nodes near coords,
@@ -29,9 +30,9 @@
 			]
 			
 			\addplot[fill=BlueViolet!70, opacity=0.8]
-			table[col sep=space, x index=0, y index=1]{./data/membrane_helix_propensity.dat};
+			table[col sep=space, x index=0, y index=1]{./data/membrane_aa_probability_propensity.dat};
 			\addplot[fill=RedOrange!70, opacity=0.8]
-			table[col sep=space, x index=0, y index=1]{./data/protein_helix_propensity.dat};
+			table[col sep=space, x index=0, y index=1]{./data/protein_aa_probability_propensity.dat};
 			\addlegendentry{Membrane Proteins};
 			\addlegendentry{Globular Proteins};
 			
