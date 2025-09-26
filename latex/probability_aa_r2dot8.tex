@@ -1,0 +1,45 @@
+\documentclass[border=0.5cm]{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{
+	width=22cm,
+	compat=1.9,
+	tick label style={font={\fontsize{14pt}{14pt}\selectfont}},
+	label style={font={\fontsize{24pt}{12pt}\selectfont}},
+	legend style={font={\fontsize{24pt}{12pt}\selectfont}},
+	title style={font={\fontsize{24pt}{12pt}\selectfont}}
+}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar=0.cm,           % ensures bars for multiple plots are side by side,
+			x=1.5cm, 
+			bar width=0.5cm,
+			title={Amino Acid Probability in Proteins},
+			xlabel={Residue},
+			ylabel={Propensity Value},
+			ymin=0,
+			xmin=ALA,
+			xtick=data,
+			%nodes near coords,
+			x tick label style={rotate=45, anchor=east},
+			enlarge x limits=0.04,
+			symbolic x coords={ALA, VAL, ILE, LEU, MET, PHE, TYR, TRP, CYS, GLY, PRO, SER, THR, ASN, GLN, ARG, HIS, LYS, ASP, GLU},
+			yticklabel=\pgfkeys{/pgf/number format/.cd,fixed,precision=2,zerofill}\pgfmathprintnumber{\tick},
+			]
+			
+			\addplot[fill=BlueViolet!70, opacity=0.8]
+			table[col sep=space, x index=0, y index=1]{./data/membrane_aa_probability_propensity_res_2dot8.dat};
+			\addplot[fill=RedOrange!70, opacity=0.8]
+			table[col sep=space, x index=0, y index=1]{./data/protein_aa_probability_propensity_res_2dot8.dat};
+			\addlegendentry{Membrane Proteins};
+			\addlegendentry{Globular Proteins};
+			
+		\end{axis}
+\end{tikzpicture}
+\end{document}
+			
+
+
