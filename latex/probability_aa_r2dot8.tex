@@ -21,13 +21,13 @@
 			xlabel={Residue},
 			ylabel={Propensity Value},
 			ymin=0,
-			xmin=ALA,
+			%xmin=ILE,
 			xtick=data,
 			%nodes near coords,
 			x tick label style={rotate=45, anchor=east},
 			enlarge x limits=0.04,
-			symbolic x coords={ALA, VAL, ILE, LEU, MET, PHE, TYR, TRP, CYS, GLY, PRO, SER, THR, ASN, GLN, ARG, HIS, LYS, ASP, GLU},
 			yticklabel=\pgfkeys{/pgf/number format/.cd,fixed,precision=2,zerofill}\pgfmathprintnumber{\tick},
+			symbolic x coords={ILE, VAL, LEU, PHE, CYS, MET, ALA, GLY, THR, SER, TRP, TYR, PRO, HIS, GLN, ASN, GLU, ASP, LYS, ARG}
 			]
 			
 			\addplot[fill=BlueViolet!70, opacity=0.8]
