@@ -31,16 +31,15 @@
 			symbolic x coords={ILE, VAL, LEU, PHE, CYS, MET, ALA, GLY, THR, SER, TRP, TYR, PRO, HIS, GLN, ASN, GLU, ASP, LYS, ARG}
 			]
 			
-			\addplot[fill=BlueViolet!70, opacity=0.8]
-			table[col sep=space, x index=0, y index=1]{./data/membrane_aa_probability_propensity_res_2dot8.dat};
+			\addplot[fill=TealBlue!70, opacity=0.8]
+			table[col sep=space, x index=0, y index=1]{./data/protein_aa_probability_propensity_res_2dot8_before_2000.dat};
 			\addplot[fill=RedOrange!70, opacity=0.8]
 			table[col sep=space, x index=0, y index=1]{./data/protein_aa_probability_propensity_res_2dot8.dat};
-			\addlegendentry{Membrane Proteins};
-			\addlegendentry{Globular Proteins};
+			\addlegendentry{Proteins before 2000};
+			\addlegendentry{Proteins after 2000};
 			
 		\end{axis}
 \end{tikzpicture}
 \end{document}
 			
-
 

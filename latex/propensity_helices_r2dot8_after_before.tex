@@ -17,26 +17,25 @@
 			ybar=0.cm,           % ensures bars for multiple plots are side by side,
 			x=1.5cm, 
 			bar width=0.5cm,
-			title={Amino Acid Probability in Proteins},
+			title={Amino Acid Propensity in Helices},
 			xlabel={Residue},
 			ylabel={Propensity Value},
 			ymin=0,
-			ymax= 0.115,
-			%xmin=ILE,
+			ymax=2.05,
+			%xmin=ALA,
 			xtick=data,
 			%nodes near coords,
 			x tick label style={rotate=45, anchor=east},
 			enlarge x limits=0.04,
-			yticklabel=\pgfkeys{/pgf/number format/.cd,fixed,precision=2,zerofill}\pgfmathprintnumber{\tick},
 			symbolic x coords={ILE, VAL, LEU, PHE, CYS, MET, ALA, GLY, THR, SER, TRP, TYR, PRO, HIS, GLN, ASN, GLU, ASP, LYS, ARG}
 			]
 			
-			\addplot[fill=BlueViolet!70, opacity=0.8]
-			table[col sep=space, x index=0, y index=1]{./data/membrane_aa_probability_propensity_res_2dot8.dat};
+			\addplot[fill=TealBlue!70, opacity=0.8]
+			table[col sep=space, x index=0, y index=1]{./data/protein_helix_propensity_res_2dot8_before_2000.dat};
 			\addplot[fill=RedOrange!70, opacity=0.8]
-			table[col sep=space, x index=0, y index=1]{./data/protein_aa_probability_propensity_res_2dot8.dat};
-			\addlegendentry{Membrane Proteins};
-			\addlegendentry{Globular Proteins};
+			table[col sep=space, x index=0, y index=1]{./data/protein_helix_propensity_res_2dot8.dat};
+			\addlegendentry{Proteins before 2000};
+			\addlegendentry{Proteins after 2000};
 			
 		\end{axis}
 \end{tikzpicture}

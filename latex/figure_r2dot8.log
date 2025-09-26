@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.24)  26 SEP 2025 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.24)  26 SEP 2025 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -432,11 +432,11 @@ File: propensity_loops_r2dot8.pdf Graphic file (type pdf)
 <use propensity_loops_r2dot8.pdf>
 Package pdftex.def Info: propensity_loops_r2dot8.pdf  used on input line 33.
 (pdftex.def)             Requested size: 409.49998pt x 265.18517pt.
-<probability_aa_r2dot8.pdf, id=7, 965.33347pt x 620.55336pt>
+<probability_aa_r2dot8.pdf, id=7, 965.33347pt x 620.55441pt>
 File: probability_aa_r2dot8.pdf Graphic file (type pdf)
 <use probability_aa_r2dot8.pdf>
 Package pdftex.def Info: probability_aa_r2dot8.pdf  used on input line 34.
-(pdftex.def)             Requested size: 409.49998pt x 263.24403pt.
+(pdftex.def)             Requested size: 409.49998pt x 263.24449pt.
 
 
 [1
@@ -463,7 +463,7 @@ Here is how much of TeX's memory you used:
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on figure_r2dot8.pdf (1 page, 58420 bytes).
+Output written on figure_r2dot8.pdf (1 page, 58453 bytes).
 PDF statistics:
  76 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
