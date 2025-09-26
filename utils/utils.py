@@ -241,23 +241,23 @@ class PDB(object):
                         continue
                 #Here you can add more self objects from Header.
                 #Resolution info in cif format files.
-                if line[:25] == '_reflns.d_resolution_high' or line[:33] == '_em_3d_reconstruction.resolution ':
-                    self.resolution = sline[1]
-                    continue
-                #Helix info in cif format files.
-                if line[:6] == 'HELX_P':
-                    self.SSEraw.append([range(int(sline[-7]),int(sline[-4])+1), sline[-8], 'H'])
-                    continue
-                #Beta sheet info in cif format files.
-                if line[:35] == '_struct_sheet_range.end_auth_seq_id':
-                    b_strands = True
-                    continue
-                if b_strands:
-                    if line[:1] == '#':
-                        b_strands=False
-                        continue
-                    self.SSEraw.append([range(int(sline[-4]),int(sline[-1])+1), sline[-2], 'S'])
-                    continue
+                # if line[:25] == '_reflns.d_resolution_high' or line[:33] == '_em_3d_reconstruction.resolution ':
+                #     self.resolution = sline[1]
+                #     continue
+                # #Helix info in cif format files.
+                # if line[:6] == 'HELX_P':
+                #     self.SSEraw.append([range(int(sline[-7]),int(sline[-4])+1), sline[-8], 'H'])
+                #     continue
+                # #Beta sheet info in cif format files.
+                # if line[:35] == '_struct_sheet_range.end_auth_seq_id':
+                #     b_strands = True
+                #     continue
+                # if b_strands:
+                #     if line[:1] == '#':
+                #         b_strands=False
+                #         continue
+                #     self.SSEraw.append([range(int(sline[-4]),int(sline[-1])+1), sline[-2], 'S'])
+                #     continue
                 #Crystal info in cif format files.
                 if line[:5] == '_cell':
                     if sline[0] == '_cell.length_a':
