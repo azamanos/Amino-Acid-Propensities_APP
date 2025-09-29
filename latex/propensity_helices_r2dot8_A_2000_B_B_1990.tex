@@ -1,0 +1,48 @@
+\documentclass[border=0.5cm]{standalone}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{
+	width=22cm,
+	compat=1.9,
+	tick label style={font={\fontsize{14pt}{14pt}\selectfont}},
+	label style={font={\fontsize{24pt}{12pt}\selectfont}},
+	legend style={font={\fontsize{24pt}{12pt}\selectfont}},
+	title style={font={\fontsize{24pt}{12pt}\selectfont}}
+}
+
+\begin{document}
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar=0.cm,           % ensures bars for multiple plots are side by side,
+			x=2cm, 
+			bar width=0.5cm,
+			title={Amino Acid Propensity in Helices},
+			xlabel={Residue},
+			ylabel={Propensity Value},
+			ymin=0,
+			ymax=2.05,
+			%xmin=ALA,
+			xtick=data,
+			%nodes near coords,
+			x tick label style={rotate=45, anchor=east},
+			enlarge x limits=0.04,
+			symbolic x coords={ILE, VAL, LEU, PHE, CYS, MET, ALA, GLY, THR, SER, TRP, TYR, PRO, HIS, GLN, ASN, GLU, ASP, LYS, ARG}
+			]
+			
+			\addplot[fill=YellowGreen!70, opacity=0.8]
+			table[col sep=space, x index=0, y index=1]{./data/protein_helix_propensity_res_2dot8_before_1990.dat};
+			\addplot[fill=TealBlue!70, opacity=0.8]
+			table[col sep=space, x index=0, y index=1]{./data/protein_helix_propensity_res_2dot8_before_2000.dat};
+			\addplot[fill=RedOrange!70, opacity=0.8]
+			table[col sep=space, x index=0, y index=1]{./data/protein_helix_propensity_res_2dot8.dat};
+			\addlegendentry{Proteins before 1990};
+			\addlegendentry{Proteins before 2000};
+			\addlegendentry{Proteins after 2000};
+			
+		\end{axis}
+\end{tikzpicture}
+\end{document}
+			
+
+
